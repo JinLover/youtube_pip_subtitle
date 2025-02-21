@@ -1,0 +1,23 @@
+# Kivy specific
+*.kv~
+.kivy/
+*.buildozer/
+bin/
+
+# Android build
+.buildozer/
+
+# Binary files
+*.apk
+*.aab
+
+# Kivy logs and cache
+kivy_install.log
+.last_tmp.py
+.kivy/logs/
+
+# IDE specific for Kivy development
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
