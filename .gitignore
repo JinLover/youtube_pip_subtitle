@@ -4,9 +4,13 @@
 *.buildozer/
 bin/
 
-# Android build
-.buildozer/
+# virtual env
+/kivy_venv
+/list
 
+# Android build
+buildozer
+.buildozer/
 # Binary files
 *.apk
 *.aab
@@ -16,8 +20,5 @@ kivy_install.log
 .last_tmp.py
 .kivy/logs/
 
-# IDE specific for Kivy development
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
+.DS_Store
+log
