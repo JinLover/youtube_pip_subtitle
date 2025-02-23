@@ -1,0 +1,96 @@
+#:kivy 2.0.0
+
+<MainWidget>:
+    orientation: 'vertical'
+    padding: '10dp'
+    spacing: '10dp'
+
+    ScrollView:
+        size_hint_y: 0.3
+        do_scroll_x: False
+        do_scroll_y: True
+
+        Label:
+            id: status_label
+            text: 'YouTube 앱 검색 중...'
+            font_name: 'SDGothicNeo'
+            font_size: '20sp'
+            text_size: self.width, None
+            size_hint_y: None
+            height: self.texture_size[1]
+            halign: 'center'
+            valign: 'middle'
+    
+    Label:
+        id: playback_label
+        text: '재생 상태: 정보 없음'
+        font_name: 'SDGothicNeo'
+        font_size: '16sp'
+        text_size: self.width, None
+        size_hint_y: None
+        height: self.texture_size[1]
+        halign: 'center'
+        valign: 'middle'
+
+    Label:
+        id: time_label
+        text: '재생 시간: --:--'
+        font_name: 'SDGothicNeo'
+        font_size: '16sp'
+        text_size: self.width, None
+        size_hint_y: None
+        height: self.texture_size[1]
+        halign: 'center'
+        valign: 'middle'
+
+    Label:
+        id: url_label
+        text: ''
+        font_name: 'SDGothicNeo'
+        font_size: '14sp'
+        text_size: self.width, None
+        size_hint_y: None
+        height: self.texture_size[1]
+        halign: 'center'
+        valign: 'middle'
+    
+
+    
+    ScrollView:
+        size_hint_y: 0.2
+        do_scroll_x: False
+        do_scroll_y: True
+
+        Label:
+            id: error_label
+            text: ''
+            font_name: 'SDGothicNeo'
+            font_size: '14sp'
+            text_size: self.width, None
+            size_hint_y: None
+            height: self.texture_size[1]
+            halign: 'left'
+            valign: 'top'
+            color: 1, 0.3, 0.3, 1  # 빨간색 계열
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '48dp'
+        spacing: '10dp'
+
+        Button:
+            id: permission_button
+            text: '권한 설정'
+            font_name: 'SDGothicNeo'
+            size_hint_x: 0.5
+            background_color: 0.2, 0.6, 1, 1
+            on_release: root.open_settings()
+
+        Button:
+            id: check_button
+            text: 'YouTube 검색'
+            font_name: 'SDGothicNeo'
+            size_hint_x: 0.5
+            background_color: 0.2, 0.8, 0.2, 1
+            on_release: root.check_youtube()

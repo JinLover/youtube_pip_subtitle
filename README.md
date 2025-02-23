@@ -7,9 +7,19 @@ A Python application that allows you to:
 - Control playback
 
 ## Setup
-1. Install dependencies:
+1. Setting Virtual Envrionment:
 ```bash
-pip install -r requirements.txt
+python -m virtualenv kivy_venv
+source kivy_venv/bin/activate
+python -m pip install --upgrade pip setuptools virtualenv
+```
+
+2. Install Kivy and buildozer
+```bash
+python -m pip install "kivy[full]" kivy_examples
+git clone https://github.com/kivy/buildozer.git
+cd buildozer
+python -m pip install --upgrade pip setuptools virtualenv
 ```
 
 ## Usage
